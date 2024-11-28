@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purchase Tickets - Artisphere</title>
+  <meta name="description"
+    content="Purchase your tickets for Artisphere exhibitions and events. Secure your spot and enjoy a memorable experience exploring the world of art.">
+  <link rel="stylesheet" href="./css/datepicker.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="ticket-page">
+  <div class="wrapper">
+    <header class="header tickets">
+      <div class="header__container">
+        <div class="header__inner">
+          <div class="header__top top-header">
+            <a class="header__logo logo text" href="index.html">
+              Artisphere
+            </a>
+            <nav class="header__menu menu">
+              <button class="burger btn-reset" aria-controls="list" aria-label="Open menu" aria-expanded="false">
+                <svg class="icon icon--menu" id="burgerIcon">
+                  <use href="./icons/sprite.symbol.svg#menu"></use>
+                </svg>
+                <svg class="icon icon--close" id="closeIcon">
+                  <use href="./icons/sprite.symbol.svg#close"></use>
+                </svg>
+              </button>
+              <div class="overlay"></div>
+              <div class="menu__body">
+                <ul class="menu__list text-size-16" id="list" aria-hidden="true">
+                  <li class="menu__item">
+                    <a class="menu__link" href="exhibitions.html" tabindex="-1">Exhibitions</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="about.html" tabindex="-1">About Us</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="visit.html" tabindex="-1">Visit and Contact Us</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="tickets.html" tabindex="-1">Purchase Tickets</a>
+                  </li>
+                </ul>
+                <div class="mobile-menu__social"></div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <section class="page__purchase purchase page__section">
+        <div class="purchase__container">
+          <div class="step-form">
+            <div class="step active" id="step_1">
+              <h2 class="step__heading text-size-64">1/5. Choose your tickets</h2>
+              <div class="step__body body-step">
+                <div class="body-step__top">
+                  <div class="body-step__items">
+                    <div class="body-step__header">
+                      <span>Select tickets</span>
+                      <span>Price</span>
+                      <span>Quantity</span>
+                      <span class="body-step__header--right">Subtotal</span>
+                    </div>
+                    <div class="body-step__item" data-ticket-type="adults">
+                      <span class="body-step__label">Adults</span>
+                      <span class="body-step__price">$20</span>
+                      <div class="body-step__quantity-counter quantity-counter">
+                        <button class="quantity-counter__control" data-action="minus">-</button>
+                        <span class="quantity-counter__current" data-counter>0</span>
+                        <button class="quantity-counter__control" data-action="plus">+</button>
+                      </div>
+                      <span class="body-step__subtotal">$0</span>
+                    </div>
+                    <div class="body-step__item" data-ticket-type="seniors">
+                      <span class="body-step__label">Seniors</span>
+                      <span class="body-step__price">$15</span>
+                      <div class="body-step__quantity-counter quantity-counter">
+                        <button class="quantity-counter__control" data-action="minus">-</button>
+                        <span class="quantity-counter__current" data-counter>0</span>
+                        <button class="quantity-counter__control" data-action="plus">+</button>
+                      </div>
+                      <span class="body-step__subtotal">$0</span>
+                    </div>
+                    <div class="body-step__item" data-ticket-type="students">
+                      <span class="body-step__label">Students</span>
+                      <span class="body-step__price">$10</span>
+                      <div class="body-step__quantity-counter quantity-counter">
+                        <button class="quantity-counter__control" data-action="minus">-</button>
+                        <span class="quantity-counter__current" data-counter>0</span>
+                        <button class="quantity-counter__control" data-action="plus">+</button>
+                      </div>
+                      <span class="body-step__subtotal">$0</span>
+                    </div>
+                    <div class="body-step__item" data-ticket-type="children">
+                      <span class="body-step__label">Children under 12</span>
+                      <span class="body-step__price">$0</span>
+                      <div class="body-step__quantity-counter quantity-counter">
+                        <button class="quantity-counter__control" data-action="minus">-</button>
+                        <span class="quantity-counter__current" data-counter>0</span>
+                        <button class="quantity-counter__control" data-action="plus">+</button>
+                      </div>
+                      <span class="body-step__subtotal">$0</span>
+                    </div>
+                    <div class="body-step__hidden">
+                      <div class="body-step__item" data-ticket-type="veteran">
+                        <span class="body-step__label">Veteran</span>
+                        <span class="body-step__price">$0</span>
+                        <div class="body-step__quantity-counter quantity-counter">
+                          <button class="quantity-counter__control" data-action="minus">-</button>
+                          <span class="quantity-counter__current" data-counter>0</span>
+                          <button class="quantity-counter__control" data-action="plus">+</button>
+                        </div>
+                        <span class="body-step__subtotal">$0</span>
+                      </div>
+                      <div class="body-step__item" data-ticket-type="museum">
+                        <span class="body-step__label">Museum pass</span>
+                        <span class="body-step__price">$0</span>
+                        <div class="body-step__quantity-counter quantity-counter">
+                          <button class="quantity-counter__control" data-action="minus">-</button>
+                          <span class="quantity-counter__current" data-counter>0</span>
+                          <button class="quantity-counter__control" data-action="plus">+</button>
+                        </div>
+                        <span class="body-step__subtotal">$0</span>
+                      </div>
+                      <div class="body-step__item" data-ticket-type="city">
+                        <span class="body-step__label">City pass</span>
+                        <span class="body-step__price">$0</span>
+                        <div class="body-step__quantity-counter quantity-counter">
+                          <button class="quantity-counter__control" data-action="minus">-</button>
+                          <span class="quantity-counter__current" data-counter>0</span>
+                          <button class="quantity-counter__control" data-action="plus">+</button>
+                        </div>
+                        <span class="body-step__subtotal">$0</span>
+                      </div>
+                    </div>
+                    <div class="body-step__more">
+                      <button class="body-step__more-options" type="button" aria-label="More options">
+                        <span class="body-step__toggle-text">More options</span>
+                        <svg class="icon icon--arrow-up-broken">
+                          <use href="./icons/sprite.symbol.svg#arrow-up-broken"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="body-step__bottom">
+                  <p class="body-step__text text-size-32">Total price</p>
+                  <span class="body-step__number text-size-32 total-price">$0</span>
+                </div>
+              </div>
+              <div class="step__buttons buttons-step">
+                <button class="buttons-step__next btn-base btn-base--fill" type="button" aria-label="next step">
+                  next step
+                </button>
+              </div>
+            </div>
+            <div class="step" id="step_2">
+              <h2 class="step__heading text-size-64">
+                2/5. Select a date and timeslot
+              </h2>
+              <div class="step__body body-step">
+                <div class="body-step__date date">
+                  <div class="calendarContainer">
+                    <div class="calendar"></div>
+                  </div>
+                </div>
+                <div class="body-step__timeslot timeslot">
+                  <div class="timeslot__header text-size-32">Time slots</div>
+                  <div class="timeslot__items">
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_1" name="options" value="10:00">
+                      <label for="option_1">10:00</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_2" name="options" value="10:30">
+                      <label for="option_2">10:30</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_3" name="options" value="11:00">
+                      <label for="option_3">11:00</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_4" name="options" value="11:30">
+                      <label for="option_4">11:30</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_5" name="options" value="12:00">
+                      <label for="option_5">12:00</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_6" name="options" value="12:30">
+                      <label for="option_6">12:30</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_7" name="options" value="13:00">
+                      <label for="option_7">13:00</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_8" name="options" disabled>
+                      <label for="option_8">13:30</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_9" name="options" value="14:00">
+                      <label for="option_9">14:00</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_10" name="options" value="14:30">
+                      <label for="option_10">14:30</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_11" name="options" value="15:00">
+                      <label for="option_11">15:00</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_12" name="options" value="15:30">
+                      <label for="option_12">15:30</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_13" name="options" value="16:00">
+                      <label for="option_13">16:00</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_14" name="options" value="16:30">
+                      <label for="option_14">16:30</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_15" name="options" value="17:00">
+                      <label for="option_15">17:00</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_16" name="options" value="17:30">
+                      <label for="option_16">17:30</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_17" name="options" value="18:00">
+                      <label for="option_17">18:00</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_18" name="options" value="18:30">
+                      <label for="option_18">18:30</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_19" name="options" value="19:00">
+                      <label for="option_19">19:00</label>
+                    </div>
+                    <div class="timeslot__item">
+                      <input type="radio" id="option_20" name="options" value="19:30">
+                      <label for="option_20">19:30</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="step__buttons buttons-step">
+                <button class="buttons-step__prev btn-base btn-base--outline" type="button" aria-label="next step">
+                  back
+                </button>
+                <button class="buttons-step__next btn-base btn-base--fill" type="button" aria-label="next step">
+                  next step
+                </button>
+              </div>
+            </div>
+            <div class="step" id="step_3">
+              <h2 class="step__heading text-size-64">3/5. Personal details</h2>
+              <div class="step__body body-step">
+                <div class="body-step__form form">
+                  <div class="form__inputs">
+                    <div class="form__input-wrapper">
+                      <label for="full-name">Full Name</label>
+                      <input type="text" id="full-name" autocomplete="off" placeholder="Olga Petrenko">
+                    </div>
+                    <div class="form__input-wrapper">
+                      <label for="mail">E-mail</label>
+                      <input type="text" id="mail" autocomplete="off" placeholder="Olga.Petrenko@gmail.com">
+                    </div>
+                  </div>
+                  <div class="form__checkboxes">
+                    <label class="checkbox__wrapper">I agree with Terms and Conditions.
+                      <input class="checkbox real-checkbox" type="checkbox">
+                      <span class="custom-checkbox"></span>
+                    </label>
+                    <label class="checkbox__wrapper">I would like to receive the newsletter.
+                      <input class="checkbox real-checkbox" type="checkbox">
+                      <span class="custom-checkbox"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="step__buttons buttons-step">
+                <button class="buttons-step__prev btn-base btn-base--outline" type="button" aria-label="next step">
+                  back
+                </button>
+                <button class="buttons-step__next btn-base btn-base--fill" type="button" aria-label="next step">
+                  next step
+                </button>
+              </div>
+            </div>
+            <div class="step" id="step_4">
+              <h2 class="step__heading text-size-64">4/5. Check your order</h2>
+              <div class="step__body body-step">
+                <div class="body-step__top">
+                  <div class="body-step__column column-check">
+                    <div class="column-check__title">
+                      Personal details
+                      <button class="column-check__btn" type="button" aria-label="make changes">
+                        <svg class="icon icon--edit">
+                          <use href="./icons/sprite.symbol.svg#edit"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="column-check__info">
+                      <span class="personal-info" id="personalName"></span>
+                      <span class="personal-info" id="personalEmail"></span>
+                    </div>
+                  </div>
+                  <div class="body-step__column column-check">
+                    <div class="column-check__title">
+                      Visit date
+                      <button class="column-check__btn" type="button" aria-label="make changes">
+                        <svg class="icon icon--edit">
+                          <use href="./icons/sprite.symbol.svg#edit"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="column-check__info">
+                      <span class="personal-info" id="selectedTimeSlot"></span>
+                      <span class="personal-info" id="selectedDate"></span>
+                    </div>
+                  </div>
+                  <div class="body-step__column column-check">
+                    <div class="column-check__title">
+                      Tickets
+                      <button class="column-check__btn" type="button" aria-label="make changes">
+                        <svg class="icon icon--edit">
+                          <use href="./icons/sprite.symbol.svg#edit"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="column-check__info">
+                      <span class="info-ticket-price" id="ticket-price"></span>
+                      <span class="personal-info" id="ticket-type" contenteditable="true"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="body-step__bottom">
+                  <p class="body-step__text text-size-32">Total amount:</p>
+                  <span class="body-step__number text-size-32 total-price">$0</span>
+                </div>
+              </div>
+              <div class="step__buttons buttons-step">
+                <button class="buttons-step__prev btn-base btn-base--outline" type="button" aria-label="next step">
+                  back
+                </button>
+                <button class="buttons-step__next btn-base btn-base--fill" type="button" aria-label="next step">
+                  pay now
+                </button>
+              </div>
+            </div>
+            <div class="step" id="step_5">
+              <h2 class="step__heading text-size-64">5/5. payment</h2>
+              <div class="step__body body-step">
+                <div class="body-step__top">
+                  <div class="body-step__pay pay-body">
+                    <div class="pay-body__item">
+                      <button class="pay-body__btn text-size-32" type="button" aria-label="Pay with card">
+                        Pay with card
+                        <svg class="icon icon--arrow-up-broken">
+                          <use href="./icons/sprite.symbol.svg#arrow-up-broken"></use>
+                        </svg>
+                      </button>
+                      <form class="pay-body__form form">
+                        <div class="form__input-wrapper">
+                          <label class="label" for="card-name">Cardholder Name</label>
+                          <input class="input" placeholder="Olga Petrenko" type="text" id="card-name">
+                        </div>
+                        <div class="form__input-wrapper">
+                          <label class="label" for="card-number">Card Number</label>
+                          <input class="input" type="number" id="card-number" placeholder=".... .... .... ....">
+                        </div>
+                        <div class="form__inputs">
+                          <div class="form__box form__box--short">
+                            <label class="label" for="expiration-date">Expiration Date</label>
+                            <input class="input" placeholder="MM/YY" type="text" id="expiration-date" required>
+                          </div>
+                          <div class="form__box form__box--short">
+                            <label class="label" for="cvv">CVV</label>
+                            <input class="input" placeholder="..." id="cvv" type="text">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="pay-body__item">
+                      <button class="pay-body__btn text-size-32" type="button">
+                        Pay with PayPal
+                        <svg class="icon icon--arrow-up-broken">
+                          <use href="./icons/sprite.symbol.svg#arrow-up-broken"></use>
+                        </svg>
+                      </button>
+                      <form class="pay-body__form form">
+                        <div class="form__input-wrapper">
+                          <label class="label" for="email">e-mail</label>
+                          <input class="input" placeholder="petrenko@gmail.com" type="text" id="email">
+                        </div>
+                        <div class="form__input-wrapper">
+                          <label class="label" for="password">password</label>
+                          <input class="input" placeholder="..........." type="text" id="password">
+                        </div>
+                        <a class="pay-body__link btn-base btn-base--outline" href="https://www.paypal.com/ua/home"
+                          target="_blank">
+                          login to paypal
+                          <svg class="icon icon--arrow-up-broken">
+                            <use href="./icons/sprite.symbol.svg#arrow-up-broken"></use>
+                          </svg>
+                        </a>
+                        <button class="pay-body__button" type="button">Forgot password?</button>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="body-step__detail detail-body">
+                    <p class="detail-body__title text-size-32">Order details</p>
+                    <div class="detail-body__items">
+                      <div class="detail-body__item detail-body__item--type-price">
+                        <div class="detail-body__name" id="detail-type">Ticket</div>
+                        <div class="detail-body__price" id="detail-price">$0</div>
+                      </div>
+                      <div class="detail-body__item">
+                        <div class="detail-body__name">Discount:</div>
+                        <div class="detail-body__price">$0</div>
+                      </div>
+                    </div>
+                    <form class="detail-body__form form">
+                      <div class="form__input-wrapper">
+                        <label for="promocode">Have a promocode?</label>
+                        <input placeholder="promocode" type="text" id="promocode">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="body-step__bottom">
+                  <p class="body-step__text text-size-32">Total amount:</p>
+                  <span class="body-step__number text-size-32 total-price">$0</span>
+                </div>
+              </div>
+              <div class="step__buttons buttons-step">
+                <button class="buttons-step__prev btn-base btn-base--outline" type="button" aria-label="next step">
+                  back
+                </button>
+                <button class="buttons-step__next btn-base btn-base--fill" type="button" aria-label="next step">
+                  pay now
+                </button>
+              </div>
+            </div>
+            <div class="step" id="step_6">
+              <h2 class="step__heading text-size-64">Thank you!</h2>
+              <div class="step__body body-step">
+                <div class="body-step__text-wrapper">
+                  <p class="body-step__text text-size-32">
+                    We received your payment! <br>
+                    Please find your tickets on your e-mail or download below.
+                  </p>
+                  <a class="body-step__policy-link" href="#" target="_blank">
+                    Read about our refund policy
+                  </a>
+                </div>
+              </div>
+              <button class="body-step__btn-ticket btn-base btn-base--fill" type="button" id="thank_you"
+                aria-label="Відправити">
+                download tickets
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <a class="footer__logo logo" href="#">
+          Artisphere
+        </a>
+        <div class="footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" target="_blank" href="https://www.instagram.com" aria-label="link to Instagram">
+                <svg class="icon icon--instagram">
+                  <use href="./icons/sprite.symbol.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" target="_blank" href="https://www.facebook.com" aria-label="link to Facebook">
+                <svg class="icon icon--facebook">
+                  <use href="./icons/sprite.symbol.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" target="_blank" href="https://www.youtube.com" aria-label="link to Youtube">
+                <svg class="icon icon--youtube">
+                  <use href="./icons/sprite.symbol.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__address">123 Art Lane, Aurora Springs, USA</div>
+        <ul class="footer__list menu__list" aria-hidden="true">
+          <li class="menu__item">
+            <a class="menu__link" href="exhibitions.html" tabindex="-1">Exhibitions</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="about.html" tabindex="-1">About Us</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="visit.html" tabindex="-1">Visit and Contact Us</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="tickets.html" tabindex="-1">Purchase Tickets</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/datepicker.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
